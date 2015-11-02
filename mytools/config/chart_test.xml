@@ -1,0 +1,432 @@
+<chart xAxisMinValue='0' yAxisMaxValue='100' yAxisMinValue='0'
+	baseFontSize='12' palette='2' is3D='1' showFormBtn='0' xAxisMaxValue='100'
+	baseFont='10' canvasBorderThickness='1'>
+	<dataset seriesname='DS'>
+		<set regno='210241000126921' esdate='2013-09-13' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连赛伯乐创业投资中心(有限合伙)(210241000126921)&#xA;2013-09-13年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;25000.00万元'
+			pripid='210000-210241000022013091300048' regcap='25000.00万元' name='大连赛伯乐创业投资中心(有限合伙)'
+			width='100' id='358001153' entStatus='在营（开业）' industryphy='租赁和商务服务业' />
+		<set certNo='130229197410180011'
+			pripid='D7902CCE337ED20D991C353C871B5EBFD7AC4A4DBB71078834D0B96B9C6D8D71BDC7694FFA737E81'
+			shape='CIRCLE' color='FFFFFF' name='张刚' width='100' cerType='1'
+			id='110001603' tooltext='张刚' radius='23' />
+		<set regno='210200400058545' esdate='2009-03-13' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连爱思福农业发展有限公司(210200400058545)&#xA;2009-03-13年成立&#xA;在营（开业）&#xA;农、林、牧、渔业&#xA;150.00万元'
+			pripid='210000-210200000082009031300504' regcap='150.00万元' name='大连爱思福农业发展有限公司'
+			width='100' id='218000668' entStatus='在营（开业）' industryphy='农、林、牧、渔业' />
+		<set certNo='210119197112161228'
+			pripid='5AF9761FAF95EA12AB8896C66211A6B632C8C797CE521961F784299AB2B3D75173CF0374812CA736'
+			shape='CIRCLE' color='FFFFFF' name='都兴丽' width='100' cerType='1'
+			id='91000907' tooltext='都兴丽' radius='23' />
+		<set regno='210213000079672' esdate='2011-12-08' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连福瑞斯农业有限公司(210213000079672)&#xA;2011-12-08年成立&#xA;在营（开业）&#xA;农、林、牧、渔业&#xA;100.00万元'
+			pripid='210000-210213000012011120800797' regcap='100.00万元' name='大连福瑞斯农业有限公司'
+			width='100' id='352001322' entStatus='在营（开业）' industryphy='农、林、牧、渔业' />
+		<set certNo='230182198405114612'
+			pripid='6BA9CCD3E28FA03963C50CE081C745FE5CC26C7281E2647EB9C6E4871C184F953792121483F95AC9'
+			shape='CIRCLE' color='FFFFFF' name='刘宝军' width='100' cerType='1'
+			id='140000191' tooltext='刘宝军' radius='23' />
+		<set certNo='21010419590613341X'
+			pripid='5AF9761FAF95EA12C3020F3E8536ABE519C1B96EC8C2A6317A5D938B142365462101B76861A73F26'
+			shape='CIRCLE' color='FFFFFF' name='姜代卫' width='100' cerType='1'
+			id='138001729' tooltext='姜代卫' radius='23' />
+		<set regno='2102002008581' esdate='2001-01-05' invType='A1' shape='RECTANGLE'
+			color='FFFFFF'
+			tooltext='大连永誉农产品有限公司(2102002008581)&#xA;2001-01-05年成立&#xA;吊销&#xA;批发和零售业&#xA;100.00万元'
+			pripid='210000-210200000022001010500192' regcap='100.00万元' name='大连永誉农产品有限公司'
+			width='100' id='303000904' entStatus='吊销' industryphy='批发和零售业' />
+		<set regno='210213000043680' esdate='2006-04-29' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连兴合食品有限公司(210213000043680)&#xA;2006-04-29年成立&#xA;在营（开业）&#xA;制造业&#xA;180.00万元'
+			pripid='210000-210213000022006042900026' regcap='180.00万元' name='大连兴合食品有限公司'
+			width='100' id='207001001' entStatus='在营（开业）' industryphy='制造业' />
+		<set certNo='210204196804013038'
+			pripid='B9B54C9F48C54F49C3020F3E8536ABE5C2CF1A552FBA0912BA988B2F863D3C6BD0A60E3B4D6E3ECD'
+			shape='CIRCLE' color='FFFFFF' name='于朝晖' width='100' cerType='1'
+			id='178000012' tooltext='于朝晖' radius='23' />
+		<set regno='210242000029787' esdate='1996-02-28' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连港集发物流有限责任公司(210242000029787)&#xA;1996-02-28年成立&#xA;在营（开业）&#xA;交通运输、仓储和邮政业&#xA;109590.00万元'
+			pripid='210000-210242000011996022800020' regcap='109590.00万元' name='大连港集发物流有限责任公司'
+			width='100' id='373000658' entStatus='在营（开业）' industryphy='交通运输、仓储和邮政业' />
+		<set certNo='362501197202080838'
+			pripid='8E88A06D90C0CCF2D6C19CC15B07A8D97D7AE400F1611685F45BFFBDF93595EBD0A60E3B4D6E3ECD'
+			shape='CIRCLE' color='FFFFFF' name='徐颂' width='100' cerType='1'
+			id='60000580' tooltext='徐颂' radius='23' />
+		<set regno='34585' invType='A2' pripid='A2-1-(美国)毅都贸易有限公司' shape='RECTANGLE'
+			color='FFFFFF' regcap='0.00万元' name='(美国)毅都贸易有限公司' width='100' id='77003143'
+			entStatus='' tooltext='(美国)毅都贸易有限公司(34585)&#xA;年成立&#xA;&#xA;&#xA;0.00万元'
+			industryphy='' />
+		<set certNo='21020219591210321X'
+			pripid='B9B54C9F48C54F49514AD36AA9CFAF7854B37CBE4F1A5D5213F219891A8A28792101B76861A73F26'
+			shape='CIRCLE' color='FFFFFF' name='张同岱' width='100' cerType='1'
+			id='99002563' tooltext='张同岱' radius='23' />
+		<set regno='2102002213164' esdate='2005-09-28' invType='A1' shape='RECTANGLE'
+			color='FFFFFF'
+			tooltext='大连永誉食品有限公司大连湾加工厂(2102002213164)&#xA;2005-09-28年成立&#xA;注销&#xA;制造业&#xA;0.00万元'
+			pripid='210000-210211000022005092800470' regcap='0.00万元' name='大连永誉食品有限公司大连湾加工厂'
+			width='100' id='313000684' entStatus='注销' industryphy='制造业' />
+		<set regno='2102132101960' invType='A2' pripid='A2-1-华兴贸易有限公司'
+			shape='RECTANGLE' color='FFFFFF' regcap='0.00万元' name='华兴贸易有限公司'
+			width='100' id='26001411' entStatus=''
+			tooltext='华兴贸易有限公司(2102132101960)&#xA;年成立&#xA;&#xA;&#xA;0.00万元'
+			industryphy='' />
+		<set regno='210200400018952' esdate='2004-02-05' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连港毅都冷链有限公司(210200400018952)&#xA;2004-02-05年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;3600.00万元'
+			pripid='210000-210200000082004020500110' regcap='3600.00万元' name='大连港毅都冷链有限公司'
+			width='100' id='352000479' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set regno='210200000579407' esdate='2013-11-21' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连柏沃贸易有限公司(210200000579407)&#xA;2013-11-21年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;500.00万元'
+			pripid='210000-210200000022013112100358' regcap='500.00万元' name='大连柏沃贸易有限公司'
+			width='100' id='204000220' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set regno='210242000004013' esdate='2000-09-25' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连毅都国际货运代理有限公司(210242000004013)&#xA;2000-09-25年成立&#xA;在营（开业）&#xA;交通运输、仓储和邮政业&#xA;550.00万元'
+			pripid='210000-210242000012000092500318' regcap='550.00万元' name='大连毅都国际货运代理有限公司'
+			width='100' id='377001145' entStatus='在营（开业）' industryphy='交通运输、仓储和邮政业' />
+		<set regno='210202000048932' esdate='2014-04-09' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连益合投资管理有限公司(210202000048932)&#xA;2014-04-09年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;200.00万元'
+			pripid='210000-210202000022014040900610' regcap='200.00万元' name='大连益合投资管理有限公司'
+			width='100' id='316000325' entStatus='在营（开业）' industryphy='租赁和商务服务业' />
+		<set regno='210242000059609' esdate='2014-09-16' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连毅都投资有限公司(210242000059609)&#xA;2014-09-16年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;1000.00万元'
+			pripid='210000-21024200001201409150017X' regcap='1000.00万元' name='大连毅都投资有限公司'
+			width='100' id='211000865' entStatus='在营（开业）' industryphy='租赁和商务服务业' />
+		<set certNo='210202196603112221'
+			pripid='B9B54C9F48C54F49514AD36AA9CFAF78A36E44BBC88B3DC8870EC90ECFF33642D846B3EB9321F56C'
+			shape='CIRCLE' color='FFFFFF' name='王立' width='100' cerType='1' id='4001613'
+			tooltext='王立' radius='23' />
+		<set regno='210200000637172' esdate='2014-10-14' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连汇圣贸易有限公司(210200000637172)&#xA;2014-10-14年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;500.00万元'
+			pripid='210000-210200000022014101300367' regcap='500.00万元' name='大连汇圣贸易有限公司'
+			width='100' id='205001030' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set certNo='110108198504184711'
+			pripid='6A243EBCDE14E259075C9547CE2EB316A7D6394C4EBB64137804CE002E3D92B6BDC7694FFA737E81'
+			shape='CIRCLE' color='FFFFFF' name='方舟' width='100' cerType='1'
+			id='196002711' tooltext='方舟' radius='23' />
+		<set certNo='210219197110303013'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B668EAB538DE672A15E939A98576841FD12D1B43A7886BC169'
+			shape='CIRCLE' color='FFFFFF' name='刘勇' width='100' cerType='1'
+			id='152002820' tooltext='刘勇' radius='23' />
+		<set certNo='210204197003275825'
+			pripid='B9B54C9F48C54F49C3020F3E8536ABE579E28899C903BD52B0CD818C58229F37253FBAEA564F7ECE'
+			shape='CIRCLE' color='FFFFFF' name='丛云' width='100' cerType='1'
+			id='159001906' tooltext='丛云' radius='23' />
+		<set certNo='210211197411253186'
+			pripid='B9B54C9F48C54F49D9C214C8A4E6AB571A00FC11AF1F317FEF7F00B64AA13D93CFA3621BC52ADBD0'
+			shape='CIRCLE' color='FFFFFF' name='王丽娜' width='100' cerType='1'
+			id='14001446' tooltext='王丽娜' radius='23' />
+		<set regno='210242000054733' esdate='2014-04-29' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连港泓国际贸易有限公司(210242000054733)&#xA;2014-04-29年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;2000.00万元'
+			pripid='210000-210242000022014042801411' regcap='2000.00万元' name='大连港泓国际贸易有限公司'
+			width='100' id='312001508' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set certNo='TE7452180' pripid='6A4FD3EEDCFC8544E4CE5E5D9B66B9960A32A0CCEE04F0C8'
+			shape='CIRCLE' color='FFFFFF' name='橘直纪' width='100' cerType='1'
+			id='102003010' tooltext='橘直纪' radius='23' />
+		<set regno='210200400004695' esdate='1993-10-28' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连中良畜禽有限公司(210200400004695)&#xA;1993-10-28年成立&#xA;在营（开业）&#xA;制造业&#xA;280.00万元'
+			pripid='210000-210200000081993102800023' regcap='280.00万元' name='大连中良畜禽有限公司'
+			width='100' id='366001210' entStatus='在营（开业）' industryphy='制造业' />
+		<set regno='36454007-000' invType='A2' pripid='A2-1-喜安国际有限公司'
+			shape='RECTANGLE' color='FFFFFF' regcap='0.00万元' name='喜安国际有限公司'
+			width='100' id='58001156' entStatus=''
+			tooltext='喜安国际有限公司(36454007-000)&#xA;年成立&#xA;&#xA;&#xA;0.00万元'
+			industryphy='' />
+		<set certNo='210211196210285814'
+			pripid='B9B54C9F48C54F49D9C214C8A4E6AB57D506176E25DEDEF16C4E21DB51D292A01D7921103A06B731'
+			shape='CIRCLE' color='FFFFFF' name='鞠宏斌' width='100' cerType='1'
+			id='171002364' tooltext='鞠宏斌' radius='23' />
+		<set certNo='210202196404111744'
+			pripid='B9B54C9F48C54F49514AD36AA9CFAF78E44D3C1DE2FAD1F7BE4732392DCCA063709434F820923736'
+			shape='CIRCLE' color='FFFFFF' name='孙立村' width='100' cerType='1'
+			id='42001037' tooltext='孙立村' radius='23' />
+		<set certNo='210203196901045270'
+			pripid='B9B54C9F48C54F499CADE2EAF1B4289773678B9F66ED11FCF88FB2F6972E718460A1D6F9FA260B9A'
+			shape='CIRCLE' color='FFFFFF' name='王劲松' width='100' cerType='1'
+			id='135002996' tooltext='王劲松' radius='23' />
+		<set regno='210200000484250' esdate='2012-02-22' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连元信邦投资管理有限公司(210200000484250)&#xA;2012-02-22年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;2000.00万元'
+			pripid='210000-210200000022012022200828' regcap='2000.00万元' name='大连元信邦投资管理有限公司'
+			width='100' id='272000774' entStatus='在营（开业）' industryphy='租赁和商务服务业' />
+		<set regno='210200000195475' esdate='2003-11-12' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连毅都集团有限公司(210200000195475)&#xA;2003-11-12年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;2000.00万元'
+			pripid='210000-210200000022003111200040' regcap='2000.00万元' name='大连毅都集团有限公司'
+			width='100' id='205000725' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set regno='210200000488576' esdate='2012-03-12' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连中毅贸易有限公司(210200000488576)&#xA;2012-03-12年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;2000.00万元'
+			pripid='210000-210200000022012031200790' regcap='2000.00万元' name='大连中毅贸易有限公司'
+			width='100' id='299001212' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set certNo='232103197709176814'
+			pripid='B71976B43A229A189CADE2EAF1B428976083F9968D549F1A27983CA733CDA7841D7921103A06B731'
+			shape='CIRCLE' color='FFFFFF' name='臧明' width='100' cerType='1' id='7002697'
+			tooltext='臧明' radius='23' />
+		<set regno='210200000643781' esdate='2015-01-13' invType='A1'
+			shape='RECTANGLE' color='3399FF'
+			tooltext='养牛人有限公司(210200000643781)&#xA;2015-01-13年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;10000.00万元'
+			pripid='210000-210200000022015011300501' regcap='10000.00万元' name='养牛人有限公司'
+			width='100' id='321000714' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set regno='63455753-000-06-14-8' invType='A2' pripid='A2-1-冠联国际贸易有限公司'
+			shape='RECTANGLE' color='FFFFFF' regcap='0.00万元' name='冠联国际贸易有限公司'
+			width='100' id='98000868' entStatus=''
+			tooltext='冠联国际贸易有限公司(63455753-000-06-14-8)&#xA;年成立&#xA;&#xA;&#xA;0.00万元'
+			industryphy='' />
+		<set certNo='220223197608293912'
+			pripid='F2EF2094C7B4B44641B96AA028E0539FBFC0EC5C26591CE39F0B9C4651BE5E703792121483F95AC9'
+			shape='CIRCLE' color='FFFFFF' name='金钟洙' width='100' cerType='1'
+			id='100001188' tooltext='金钟洙' radius='23' />
+		<set regno='210242000008839' esdate='2002-03-11' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连港集装箱发展有限公司(210242000008839)&#xA;2002-03-11年成立&#xA;在营（开业）&#xA;交通运输、仓储和邮政业&#xA;277146.00万元'
+			pripid='210000-210242000012002031100192' regcap='277146.00万元' name='大连港集装箱发展有限公司'
+			width='100' id='277000405' entStatus='在营（开业）' industryphy='交通运输、仓储和邮政业' />
+		<set certNo='210219197001253993'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B68737A628B0172C6CB4EAEB671164905E0F5A8BC19791CA7D'
+			shape='CIRCLE' color='FFFFFF' name='刘智' width='100' cerType='1'
+			id='197001259' tooltext='刘智' radius='23' />
+		<set certNo='21021919700123301X'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B68737A628B0172C6CFB9CCE0CC7AECCF22101B76861A73F26'
+			shape='CIRCLE' color='FFFFFF' name='刘智' width='100' cerType='1'
+			id='166000806' tooltext='刘智' radius='23' />
+		<set certNo='210219197001253010'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B68737A628B0172C6CFAD5231C20CED5668A21CB2AD4690B21'
+			shape='CIRCLE' color='FFFFFF' name='刘智' width='100' cerType='1'
+			id='101002122' tooltext='刘智' radius='23' />
+		<set regno='210200000555521' esdate='2013-05-28' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连安格斯投资发展有限公司(210200000555521)&#xA;2013-05-28年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;3900.00万元'
+			pripid='210000-21020000001201305280080X' regcap='3900.00万元' name='大连安格斯投资发展有限公司'
+			width='100' id='340000222' entStatus='在营（开业）' industryphy='租赁和商务服务业' />
+		<set certNo='210204197209090113'
+			pripid='B9B54C9F48C54F49C3020F3E8536ABE5A85A2B6E07FC8F5126E5C5EECDBBBF572D1B43A7886BC169'
+			shape='CIRCLE' color='FFFFFF' name='王治纲' width='100' cerType='1'
+			id='65001476' tooltext='王治纲' radius='23' />
+		<set certNo='210202198911121719'
+			pripid='B9B54C9F48C54F49514AD36AA9CFAF786B602FB22A443D8EEFE8FFCCA18A892945E17165136E1D79'
+			shape='CIRCLE' color='FFFFFF' name='张嘉益' width='100' cerType='1'
+			id='65002201' tooltext='张嘉益' radius='23' />
+		<set regno='210200400034598' esdate='1995-12-26' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连永誉集装箱服务有限公司(210200400034598)&#xA;1995-12-26年成立&#xA;在营（开业）&#xA;科学研究、技术服务和地质勘查业&#xA;85.00万元'
+			pripid='210000-210200000081995122600060' regcap='85.00万元' name='大连永誉集装箱服务有限公司'
+			width='100' id='333001214' entStatus='在营（开业）' industryphy='科学研究、技术服务和地质勘查业' />
+		<set regno='210200000640424' esdate='2014-11-20' invType='A1'
+			shape='RECTANGLE' color='FFFFFF'
+			tooltext='大连聚优品贸易有限公司(210200000640424)&#xA;2014-11-20年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;500.00万元'
+			pripid='210000-210200000022014111901019' regcap='500.00万元' name='大连聚优品贸易有限公司'
+			width='100' id='250001034' entStatus='在营（开业）' industryphy='批发和零售业' />
+		<set certNo='210219197110303013'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B668EAB538DE672A15E939A98576841FD12D1B43A7886BC169'
+			shape='CIRCLE' color='FFFFFF' name='刘毅武' width='100' cerType='1'
+			id='173001631' tooltext='刘毅武' radius='23' />
+		<set certNo='210204197310120049'
+			pripid='B9B54C9F48C54F49C3020F3E8536ABE5BE61E2BDC4B4DC995D15FA1C98E7FDD1E7EC8E9BD1EE3239'
+			shape='CIRCLE' color='FFFFFF' name='安靖' width='100' cerType='1'
+			id='160000280' tooltext='安靖' radius='23' />
+		<set certNo='210219197110303099'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B668EAB538DE672A15E939A98576841FD13DC28606F90ED05A'
+			shape='CIRCLE' color='FFFFFF' name='刘勇' width='100' cerType='1'
+			id='139002565' tooltext='刘勇' radius='23' />
+		<set certNo='210219196501034370'
+			pripid='B9B54C9F48C54F49AB8896C66211A6B64E0E494EF5C8581C35F2998D995D6BFD60A1D6F9FA260B9A'
+			shape='CIRCLE' color='FFFFFF' name='王建军' width='100' cerType='1'
+			id='120001762' tooltext='王建军' radius='23' />
+	</dataset>
+	<connectors stdThickness='1'>
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=执行董事, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='197001259' to='205000725' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=280.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='178000012' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=10.0, invType=B1C1, postion=董事, regcap=280.00, tripsCny=美元, subconam=28.00, tripsScaleStr=10.0%, condate=1993-10-28}'
+			from='102003010' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=5.0, invType=C1B1, postion=执行董事, regcap=500.00, tripsCny=null, subconam=25.00, tripsScaleStr=5.0%, condate=1900-01-01}'
+			from='7002697' to='205001030' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=3600.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='171002364' to='352000479' />
+		<connector color='999999'
+			trips='{conprop=20.0, invType=A2, postion=null, regcap=280.00, tripsCny=美元, subconam=56.00, tripsScaleStr=20.0%, condate=1993-10-28}'
+			from='98000868' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=2.5, invType=B1, postion=null, regcap=2000.00, tripsCny=null, subconam=50.00, tripsScaleStr=2.5%, condate=2003-11-12}'
+			from='173001631' to='205000725' />
+		<connector color='999999'
+			trips='{conprop=20.0, invType=A1, postion=null, regcap=25000.00, tripsCny=null, subconam=5000.00, tripsScaleStr=20.0%, condate=1900-01-01}'
+			from='299001212' to='358001153' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=280.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='152002820' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=3600.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='152002820' to='352000479' />
+		<connector color='999999'
+			trips='{conprop=50.0, invType=B1, postion=null, regcap=2000.00, tripsCny=null, subconam=1000.00, tripsScaleStr=50.0%, condate=2012-02-07}'
+			from='152002820' to='272000774' />
+		<connector color='999999'
+			trips='{conprop=20.0, invType=C1B1, postion=监事, regcap=500.00, tripsCny=null, subconam=100.00, tripsScaleStr=20.0%, condate=2013-11-11}'
+			from='99002563' to='204000220' />
+		<connector color='999999'
+			trips='{conprop=99.0, invType=A1, postion=null, regcap=3900.00, tripsCny=null, subconam=3861.00, tripsScaleStr=99.0%, condate=2013-05-27}'
+			from='299001212' to='340000222' />
+		<connector color='999999'
+			trips='{conprop=15.0, invType=B1C1, postion=总经理, regcap=500.00, tripsCny=null, subconam=75.00, tripsScaleStr=15.0%, condate=1900-01-01}'
+			from='100001188' to='205001030' />
+		<connector color='999999'
+			trips='{conprop=100.0, invType=B1, postion=null, regcap=200.00, tripsCny=null, subconam=200.00, tripsScaleStr=100.0%, condate=1900-01-01}'
+			from='152002820' to='316000325' />
+		<connector color='999999'
+			trips='{conprop=50.0, invType=A1, postion=null, regcap=3600.00, tripsCny=人民币, subconam=1800.00, tripsScaleStr=50.0%, condate=2009-12-22}'
+			from='373000658' to='352000479' />
+		<connector color='999999'
+			trips='{conprop=80.0, invType=C1B1, postion=监事, regcap=500.00, tripsCny=null, subconam=400.00, tripsScaleStr=80.0%, condate=1900-01-01}'
+			from='152002820' to='205001030' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=负责人, regcap=1.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='152002820' to='313000684' />
+		<connector color='999999'
+			trips='{conprop=80.0, invType=A1, postion=null, regcap=100.00, tripsCny=null, subconam=80.00, tripsScaleStr=80.0%, condate=2011-11-30}'
+			from='205000725' to='352001322' />
+		<connector color='999999'
+			trips='{conprop=5.0, invType=B1, postion=null, regcap=500.00, tripsCny=null, subconam=25.00, tripsScaleStr=5.0%, condate=2013-11-11}'
+			from='42001037' to='204000220' />
+		<connector color='999999'
+			trips='{conprop=63.63999938964844, invType=A1, postion=null, regcap=550.00, tripsCny=null, subconam=350.00, tripsScaleStr=64.0%, condate=2000-09-25}'
+			from='205000725' to='377001145' />
+		<connector color='999999'
+			trips='{conprop=6.0, invType=A2, postion=null, regcap=280.00, tripsCny=美元, subconam=16.80, tripsScaleStr=6.0%, condate=1993-10-28}'
+			from='58001156' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=100.0, invType=A1, postion=null, regcap=1000.00, tripsCny=null, subconam=1000.00, tripsScaleStr=100.0%, condate=1900-01-01}'
+			from='205000725' to='211000865' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=监事, regcap=100.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='120001762' to='303000904' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=3600.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='166000806' to='352000479' />
+		<connector color='999999'
+			trips='{conprop=75.0, invType=B1C1, postion=执行董事, regcap=100.00, tripsCny=null, subconam=75.00, tripsScaleStr=75.0%, condate=2001-01-05}'
+			from='101002122' to='303000904' />
+		<connector color='999999'
+			trips='{conprop=25.0, invType=A1, postion=null, regcap=280.00, tripsCny=美元, subconam=70.00, tripsScaleStr=25.0%, condate=1900-01-01}'
+			from='207001001' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=280.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='65002201' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=10.0, invType=C1B1, postion=执行董事兼总经理, regcap=2000.00, tripsCny=null, subconam=200.00, tripsScaleStr=10.0%, condate=2012-03-02}'
+			from='91000907' to='299001212' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='135002996' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=15.0, invType=B1C1, postion=总经理, regcap=500.00, tripsCny=null, subconam=75.00, tripsScaleStr=15.0%, condate=1900-01-01}'
+			from='196002711' to='250001034' />
+		<connector color='999999'
+			trips='{conprop=51.0, invType=B1, postion=null, regcap=500.00, tripsCny=null, subconam=255.00, tripsScaleStr=51.0%, condate=2013-11-11}'
+			from='152002820' to='204000220' />
+		<connector color='999999'
+			trips='{conprop=90.0, invType=B1C1, postion=监事, regcap=2000.00, tripsCny=null, subconam=1800.00, tripsScaleStr=90.0%, condate=2012-03-02}'
+			from='152002820' to='299001212' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='159001906' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=25.0, invType=B1, postion=null, regcap=100.00, tripsCny=null, subconam=25.00, tripsScaleStr=25.0%, condate=2001-01-05}'
+			from='152002820' to='303000904' />
+		<connector color='999999'
+			trips='{conprop=5.0, invType=C1B1, postion=执行董事, regcap=500.00, tripsCny=null, subconam=25.00, tripsScaleStr=5.0%, condate=1900-01-01}'
+			from='7002697' to='250001034' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事兼总经理, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='101002122' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=A1, postion=null, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=&lt;1%, condate=1900-01-01}'
+			from='277000405' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=监事, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='4001613' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=80.0, invType=C1B1, postion=监事, regcap=500.00, tripsCny=null, subconam=400.00, tripsScaleStr=80.0%, condate=1900-01-01}'
+			from='152002820' to='250001034' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=A1, postion=null, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=&lt;1%, condate=1900-01-01}'
+			from='205000725' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='152002820' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=50.0, invType=A1, postion=null, regcap=150.00, tripsCny=美元, subconam=75.00, tripsScaleStr=50.0%, condate=2009-06-25}'
+			from='205000725' to='218000668' />
+		<connector color='999999'
+			trips='{conprop=39.0, invType=A2, postion=null, regcap=280.00, tripsCny=美元, subconam=109.20, tripsScaleStr=39.0%, condate=1993-10-28}'
+			from='26001411' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=副总经理, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='160000280' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=50.0, invType=C1B1, postion=监事, regcap=2000.00, tripsCny=null, subconam=1000.00, tripsScaleStr=50.0%, condate=2012-02-07}'
+			from='138001729' to='272000774' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=执行董事兼总经理, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='139002565' to='272000774' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=监事, regcap=280.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='14001446' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事长, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='171002364' to='312001508' />
+		<connector color='999999'
+			trips='{conprop=74.12000274658203, invType=A1, postion=null, regcap=85.00, tripsCny=美元, subconam=63.00, tripsScaleStr=74.0%, condate=1997-01-06}'
+			from='205000725' to='333001214' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=监事, regcap=200.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='91000907' to='316000325' />
+		<connector color='999999'
+			trips='{conprop=50.0, invType=A2, postion=null, regcap=3600.00, tripsCny=人民币, subconam=1800.00, tripsScaleStr=50.0%, condate=2009-12-22}'
+			from='77003143' to='352000479' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事长, regcap=3600.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='60000580' to='352000479' />
+		<connector color='999999'
+			trips='{conprop=20.0, invType=B1, postion=null, regcap=500.00, tripsCny=null, subconam=100.00, tripsScaleStr=20.0%, condate=2013-11-11}'
+			from='178000012' to='204000220' />
+		<connector color='999999'
+			trips='{conprop=20.0, invType=C1B1, postion=执行董事, regcap=10000.00, tripsCny=null, subconam=2000.00, tripsScaleStr=20.0%, condate=1900-01-01}'
+			from='110001603' to='321000714' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=执行董事, regcap=200.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='140000191' to='316000325' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=监事, regcap=2000.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='152002820' to='205000725' />
+		<connector color='999999'
+			trips='{conprop=0.0, invType=C1, postion=董事长, regcap=280.00, tripsCny=null, subconam=0.00, tripsScaleStr=}'
+			from='99002563' to='366001210' />
+		<connector color='999999'
+			trips='{conprop=4.0, invType=C1B1, postion=执行董事, regcap=500.00, tripsCny=null, subconam=20.00, tripsScaleStr=4.0%, condate=2013-11-11}'
+			from='65001476' to='204000220' />
+		<connector color='999999'
+			trips='{conprop=97.5, invType=B1, postion=null, regcap=2000.00, tripsCny=null, subconam=1950.00, tripsScaleStr=97.0%, condate=2003-11-12}'
+			from='101002122' to='205000725' />
+		<connector color='999999'
+			trips='{conprop=80.0, invType=C1B1, postion=监事, regcap=10000.00, tripsCny=null, subconam=8000.00, tripsScaleStr=80.0%, condate=1900-01-01}'
+			from='152002820' to='321000714' />
+	</connectors>
+</chart>

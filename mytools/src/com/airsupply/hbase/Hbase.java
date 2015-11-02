@@ -1,11 +1,8 @@
 package com.airsupply.hbase;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.hadoop.conf.Configuration;
@@ -24,20 +21,34 @@ import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.client.Scan;
+import org.apache.hadoop.hbase.filter.BinaryComparator;
+import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
+import org.apache.hadoop.hbase.filter.QualifierFilter;
 import org.apache.hadoop.hbase.util.Bytes;
 
-import com.chinadaas.gsinfo.core.utils.DateUtils;
-import com.chinadaas.gsinfo.hbase.data.SearchResult;
+import com.airsupply.monitor.BaseInfoDaoImpl;
+import com.airsupply.monitor.GenerateChangeDate;
+import com.chinadaas.gsinfo.hbase.data.EntBaseinfo;
 import com.common.utils.StringUtils;
+/**
+ * hbase操作类
 
+* <p>Description: </p>
+
+* @author airsupply
+
+* @date 2015年11月2日
+
+* @version 1.0
+ */
 public class Hbase {
 
 	// 声明静态配置
 	static Configuration conf = null;
 
 	static HConnection conn = null;
-	private static final byte[] TABLE_FAMILY = Bytes.toBytes("f");
-	private static final byte[] ALL_QUALIFIER = Bytes.toBytes("A");
+
+	// static HTable table;
 
 	/*
 	 * 创建表
@@ -47,10 +58,7 @@ public class Hbase {
 	 * @family 列族列表
 	 */
 	public static void creatTable(String tableName, String[] family) throws Exception {
-
-		Configuration conf = HBaseConfiguration.create();
-		conf.set("hbase.zookeeper.quorum", "192.168.139.129");
-		conf.set("hbase.zookeeper.property.clientPort", "2181");
+		@SuppressWarnings("resource")
 		HBaseAdmin admin = new HBaseAdmin(conf);
 		HTableDescriptor desc = new HTableDescriptor();
 		for (int i = 0; i < family.length; i++) {
@@ -63,6 +71,62 @@ public class Hbase {
 		admin.createTable(desc);
 		System.out.println("create table Success!");
 
+	}
+
+	public static void createTable(String tableName) {
+		long start = System.currentTimeMillis();
+		try {
+			HTableInterface htable = conn.getTable(tableName);
+			List<Put> putList = new ArrayList<Put>();
+			HColumnDescriptor[] columnFamilies = htable.getTableDescriptor().getColumnFamilies();
+
+			String[] family = { "article", "author" };
+			creatTable(tableName, family);
+			String[] column1 = { "title", "content", "tag" };
+			String[] column2 = { "name", "nickname" };
+			for (int i = 1; i <= 1000000; i++) {
+				DecimalFormat format = new DecimalFormat("00000000");
+				String rowKey = format.format(i);
+				// System.out.println("==| insert"+rowKey);
+				String[] valueOfArticle = { "title" + i, "content" + i, "tag" + i };
+				String[] valueOfAuthor = { "name" + i, "nickname" + i };
+				// addData(rowKey, tableName, column1, valueOfArticle, column2,
+				// valueOfAuthor);
+
+				Put put = new Put(Bytes.toBytes(rowKey));// 设置rowkey
+
+				for (int colIndex = 0; colIndex < columnFamilies.length; colIndex++) {
+					String familyName = columnFamilies[colIndex].getNameAsString(); // 获取列族名
+
+					if (familyName.equals("article")) { // article列族put数据
+						for (int k = 0; k < column1.length; k++) {
+							put.add(Bytes.toBytes(familyName), Bytes.toBytes(column1[k]),
+									Bytes.toBytes(valueOfArticle[k]));
+						}
+					}
+					if (familyName.equals("author")) { // author列族put数据
+						for (int k = 0; k < column2.length; k++) {
+							put.add(Bytes.toBytes(familyName), Bytes.toBytes(column2[k]),
+									Bytes.toBytes(valueOfAuthor[k]));
+						}
+					}
+				}
+				putList.add(put);
+				if (i % 10000 == 0) {
+
+					htable.put(putList);
+					putList = new ArrayList<Put>();
+				}
+
+			}
+
+			long end = System.currentTimeMillis();
+			long used = end - start;
+			System.out.println("data insert  finished used " + used + " ms");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/*
@@ -114,9 +178,14 @@ public class Hbase {
 	 * 
 	 * @tableName 表名
 	 */
-	public static Result getResult(String tableName, String rowKey) throws IOException {
+	public static Result getResult(String tableName, String rowKey, String qualifierName)
+			throws IOException {
 
 		Get get = new Get(Bytes.toBytes(rowKey));
+		QualifierFilter filter = new QualifierFilter(CompareOp.EQUAL, new BinaryComparator(
+				Bytes.toBytes(qualifierName)));
+		get.setFilter(filter);
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));// 获取表
 		Result result = table.get(get);
 		for (KeyValue kv : result.list()) {
@@ -127,29 +196,6 @@ public class Hbase {
 			System.out.println("-------------------------------------------");
 		}
 		return result;
-	}
-
-	/*
-	 * 查询表中的某一列
-	 * 
-	 * @tableName 表名
-	 * 
-	 * @rowKey rowKey
-	 */
-	public static void getResultByColumn(String tableName, String rowKey, String familyName,
-			String columnName) throws IOException {
-
-		HTable table = new HTable(conf, Bytes.toBytes(tableName));
-		Get get = new Get(Bytes.toBytes(rowKey));
-		get.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(columnName)); // 获取指定列族和列修饰符对应的列
-		Result result = table.get(get);
-		for (KeyValue kv : result.list()) {
-			System.out.println("family:" + Bytes.toString(kv.getFamily()));
-			System.out.println("qualifier:" + Bytes.toString(kv.getQualifier()));
-			System.out.println("value:" + Bytes.toString(kv.getValue()));
-			System.out.println("Timestamp:" + kv.getTimestamp());
-			System.out.println("-------------------------------------------");
-		}
 	}
 
 	/*
@@ -168,6 +214,7 @@ public class Hbase {
 	public static void updateTable(String tableName, String rowKey, String familyName,
 			String columnName, String value) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Put put = new Put(Bytes.toBytes(rowKey));
 		put.add(Bytes.toBytes(familyName), Bytes.toBytes(columnName), Bytes.toBytes(value));
@@ -189,6 +236,7 @@ public class Hbase {
 	public static void getResultByVersion(String tableName, String rowKey, String familyName,
 			String columnName) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Get get = new Get(Bytes.toBytes(rowKey));
 		get.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(columnName));
@@ -222,6 +270,7 @@ public class Hbase {
 	public static void deleteColumn(String tableName, String rowKey, String falilyName,
 			String columnName) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Delete deleteColumn = new Delete(Bytes.toBytes(rowKey));
 		deleteColumn.deleteColumns(Bytes.toBytes(falilyName), Bytes.toBytes(columnName));
@@ -238,6 +287,7 @@ public class Hbase {
 	 */
 	public static void deleteAllColumn(String tableName, String rowKey) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Delete deleteAll = new Delete(Bytes.toBytes(rowKey));
 		table.delete(deleteAll);
@@ -251,6 +301,7 @@ public class Hbase {
 	 */
 	public static void deleteTable(String tableName) throws IOException {
 
+		@SuppressWarnings("resource")
 		HBaseAdmin admin = new HBaseAdmin(conf);
 		admin.disableTable(tableName);
 		admin.deleteTable(tableName);
@@ -262,63 +313,14 @@ public class Hbase {
 	 */
 
 	public static void setConfig() {
-
 		conf = HBaseConfiguration.create();
-	  // conf.set("hbase.zookeeper.quorum", "192.168.202.101");
-	}
+		// conf.set("hbase.zookeeper.quorum",
+		// "192.168.202.101,192.168.202.103,192.168.202.102");
+		// conf.set("zookeeper.znode.parent", "/hbase1");
+		// conf.setInt("hbase.zookeeper.property.clientPort", 2181);
+		conf.set("hbase.rpc.timeout", "600000");
 
-	public static void createTable(String tableName) {
-		long start = System.currentTimeMillis();
-		try {
-			HTableInterface htable = conn.getTable(tableName);
-			List<Put> putList = new ArrayList<Put>();
-			HColumnDescriptor[] columnFamilies = htable.getTableDescriptor().getColumnFamilies();
-
-			String[] family = { "article", "author" };
-			creatTable(tableName, family);
-			String[] column1 = { "title", "content", "tag" };
-			String[] column2 = { "name", "nickname" };
-			for (int i = 1; i <= 1000000; i++) {
-				DecimalFormat format = new DecimalFormat("00000000");
-				String rowKey = format.format(i);
-				// System.out.println("==| insert"+rowKey);
-				String[] valueOfArticle = { "title" + i, "content" + i, "tag" + i };
-				String[] valueOfAuthor = { "name" + i, "nickname" + i };
-				// addData(rowKey, tableName, column1, valueOfArticle, column2,
-				// valueOfAuthor);
-				Put put = new Put(Bytes.toBytes(rowKey));// 设置rowkey
-
-				for (int colIndex = 0; colIndex < columnFamilies.length; colIndex++) {
-					String familyName = columnFamilies[colIndex].getNameAsString(); // 获取列族名
-
-					if (familyName.equals("article")) { // article列族put数据
-						for (int k = 0; k < column1.length; k++) {
-							put.add(Bytes.toBytes(familyName), Bytes.toBytes(column1[k]),
-									Bytes.toBytes(valueOfArticle[k]));
-						}
-					}
-					if (familyName.equals("author")) { // author列族put数据
-						for (int k = 0; k < column2.length; k++) {
-							put.add(Bytes.toBytes(familyName), Bytes.toBytes(column2[k]),
-									Bytes.toBytes(valueOfAuthor[k]));
-						}
-					}
-				}
-				putList.add(put);
-				if (i % 10000 == 0) {
-
-					htable.put(putList);
-					putList = new ArrayList<Put>();
-				}
-
-			}
-			long end = System.currentTimeMillis();
-			long used = end - start;
-			System.out.println("data insert  finished used " + used + " ms");
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		// conf.set("hbase.zookeeper.quorum", "192.168.139.129");
 	}
 
 	@SuppressWarnings("resource")
@@ -335,27 +337,42 @@ public class Hbase {
 				System.out.println("-------------------------------------------");
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 	}
 
-	/***********************
-	 * 将rowkey及value拼接成一个完整的字符串
+	/**
+	 * 查询表中的某一列
 	 * 
-	 * @param r
-	 * @return
+	 * @tableName 表名
 	 * 
-	 * @author wangyoucai@chinadaas.com
+	 * @rowKey rowKey
 	 */
-	public static String composite(Result r) {
-		StringBuilder sb = new StringBuilder();
-		sb.append(Bytes.toString(r.getRow()));
-		String DELIM = "\u0001";
-		sb.append(DELIM);
-		sb.append(Bytes.toString(r.getValue(TABLE_FAMILY, ALL_QUALIFIER)));
-		return sb.toString();
+	public static byte[] getResultByColumn(String tableName, String rowKey, String familyName,
+			String columnName) throws IOException {
+		System.out.println("getResultByColumn------------------");
+
+		@SuppressWarnings("resource")
+		HTable table = new HTable(conf, Bytes.toBytes(tableName));
+		Get get = new Get(Bytes.toBytes(rowKey));
+		get.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(columnName)); // 获取指定列族和列修饰符对应的列
+		Result result = table.get(get);
+		byte[] value = null;
+		for (KeyValue kv : result.list()) {
+			System.out.println("family:" + Bytes.toString(kv.getFamily()));
+			System.out.println("qualifier:" + Bytes.toString(kv.getQualifier()));
+			System.out.println("value:" + Bytes.toString(kv.getValue()));
+			System.out.println("Timestamp:" + kv.getTimestamp());
+			System.out.println("-------------------------------------------");
+			if (Bytes.toString(kv.getQualifier()).equals(columnName)) {
+				value = kv.getValue();
+
+			}
+
+		}
+
+		return value;
 	}
 
 	/*
@@ -364,122 +381,88 @@ public class Hbase {
 	 * @tableName 表名
 	 */
 	public static void getResultScann(String tableName) throws IOException {
-		int count = 0;
 		Scan scan = new Scan();
 		ResultScanner rs = null;
-		HTable table = new HTable(conf, Bytes.toBytes(tableName));
+		HTableInterface table = conn.getTable(tableName);
 		try {
-			String split = StringUtils.S001;
-			// String startRow = StringUtils.connect(split, "210000",
-			// "210200000081995122600060");
-			// String startRow="~151019155346769062854";
-			// System.out.println(startRow);
-			// scan.setStartRow(Bytes.toBytes(startRow));
-			// scan.setStopRow(Bytes.toBytes(startRow + "X"));
+		String split = StringUtils.S001;
+		String startRow = StringUtils.connect(split, "61477", "95533", "00001", "20151115");
+//			// System.out.println(startRow);
+			scan.setStartRow(Bytes.toBytes(startRow));
+			scan.setStopRow(Bytes.toBytes(startRow));
 			// QualifierFilter ff = new QualifierFilter(
 			// CompareOp.EQUAL, new BinaryComparator(Bytes.toBytes("A")));
 			// scan.setFilter(ff);
 			rs = table.getScanner(scan);
-
+            int count=0;
 			for (Result r : rs) {
-
 				count++;
 				for (KeyValue kv : r.list()) {
-					String rowKey = Bytes.toString(kv.getRow());
-					//
-					 System.out.println("row:" + Bytes.toString(kv.getRow()));
-					 System.out.println("family:"
-					 + Bytes.toString(kv.getFamily()));
-					 System.out.println("qualifier:"
-					 + Bytes.toString(kv.getQualifier()));
-					 System.out
-					 .println("value:" + Bytes.toString(kv.getValue()));
+					System.out.println("row:" + Bytes.toString(kv.getRow()));
+					System.out.println("family:" + Bytes.toString(kv.getFamily()));
+					System.out.println("qualifier:" + Bytes.toString(kv.getQualifier()));
+					System.out.println("value:" + Bytes.toString(kv.getValue()));
 
-//					SearchResult result = new SearchResult();
-//					result.parseFromBytes((kv.getValue()));
-//					if (result != null && result.getEntBaseInfo() != null) {
-//						saveFile("D:\\gsworkspace\\out_file\\order.txt", result.getEntBaseInfo()
-//								.toString() + "\n");
-//						System.out.println(result.getEntBaseInfo().getNAME());
-//					}
+					System.out.println("timestamp:" + kv.getTimestamp());
+					System.out.println("-------------------------------------------");
+					
 				}
-				int max = 100000;
-				if (count > max) {
-					System.out.println("execute end search " + max + " results!");
+				if(count>10){
 					return;
 				}
+
 			}
 		} finally {
 			rs.close();
 		}
 	}
+
+	/**
+	 * 向表中插入一条新数据
+	 * 
+	 * @param tableName
+	 *            表名
+	 * @param row
+	 *            行键key
+	 * @param columnFamily
+	 *            列族
+	 * @param column
+	 *            列名
+	 * @param data
+	 *            要插入的数据
+	 * @throws IOException
+	 */
+	public static void putData(String tableName, String row, String columnFamily, String column,
+			byte[] data) throws IOException {
+		HTableInterface table = conn.getTable(tableName);
+		Put put = new Put(Bytes.toBytes(row));
+
+		put.add(Bytes.toBytes(columnFamily), Bytes.toBytes(column), data);
+		table.put(put);
+		System.out.println("PUT:" + row + "','" + columnFamily + ":" + column + "','"
+				+ Bytes.toString(data) + "'");
+	}
+	
+	public static void getEntBaseInfo(){
+		BaseInfoDaoImpl	baseInfoDao=BaseInfoDaoImpl.getInstance();
+		EntBaseinfo baseInfo=baseInfoDao.getEntBaseInfo("630000", "630000000011953071100058");
+		System.out.println("entName"+baseInfo.getENTNAME());
+		
+	}
+
 	public static void main(String[] args) throws Exception {
-		long start = System.currentTimeMillis();
-		System.out.println("\u0001");
 		setConfig();
 		conn = HConnectionManager.createConnection(conf);
-		
-		System.out.println(DateUtils.format(new Date(), "yyyy-M-dd"));
-		
-		// System.setProperty("hadoop.home.dir", "D:/develope/hadoop-2.4.0");
-		String dateStr = "_20150717";
-		String entTableName = "ENTERPRISEBASEINFOCOLLECT" + dateStr;
+		String dateStr = "_20150908";
+		String entIndexTableName="ENTERPRISEBASEINFOCOLLECT_ENTNAME"+dateStr;
+		String entTableName = "ENTERPRISEBASEINFOCOLLECT"+dateStr;
 		String tableName = "E_INV_INVESTMENT" + dateStr;
-		String result = "result";
 		String personTable = "E_PRI_PERSON" + dateStr;
-		String gtBaseInfo = "E_GT_BASEINFO" + dateStr;
-		String userPushTable="USER_PUSH";
-		getResultScann(userPushTable);
-		long end = System.currentTimeMillis();
-		long used = ((end - start) / 1000);
-		System.out.println("Used " + used + "s!");
+		String resultTable = "RESULT";
+		String userPushTable = "USER_PUSH";
+		String alertLogTable = "ALTER_LOG";
 
-		// String rowKey=StringUtils.connect("\u0001", "210000",
-		// "210200000022015011300501");
-		// searchByRowKey(entTableName,rowKey);
-		// // 遍历查询
-		// getResultScann("blog2", "rowkey1", "rowkey2");
-		// // 根据row key范围遍历查询
-		// getResultScann("blog2", "rowkey4", "rowkey5");
-		//
-		// // 查询
-		// getResult("blog2", "rowkey1");
-		//
-		// // 查询某一列的值
-		// getResultByColumn("blog2", "rowkey1", "author", "name");
-		//
-		// // 更新列
-		// updateTable("blog2", "rowkey1", "author", "name", "bin");
-		//
-		// // 查询某一列的值
-		// getResultByColumn("blog2", "rowkey1", "author", "name");
-		//
-		// // 查询某列的多版本
-		// getResultByVersion("blog2", "rowkey1", "author", "name");
-		//
-		// // 删除一列
-		// deleteColumn("blog2", "rowkey1", "author", "nickname");
-		//
-		// // 删除所有列
-		// deleteAllColumn("blog2", "rowkey1");
-		//
-		// 删除表
-		// deleteTable("blog");
-
+		 getResultScann(userPushTable);
 	}
 
-	public static boolean saveFile(String path, String content) {
-
-		try {
-			File file = new File(path);
-			FileWriter fileWriter = new FileWriter(file, true);
-			fileWriter.write(content);
-			fileWriter.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-			return false;
-		}
-		return true;
-
-	}
 }

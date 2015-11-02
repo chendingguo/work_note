@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="client">
+	<!-- 初始化：先创建相应的文件夹 -->
+
+	<path id="compile.classpath">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean" depends="init">
+		<delete dir="build"/>
+		<delete dir="dist"/>
+	</target>
+
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="build/classes" >
+			<classpath refid="compile.classpath" />
+		</javac>
+	</target>
+
+	<target name="archive" depends="compile">
+		<jar destfile="dist/famil_report_client.jar" basedir="build/classes"/>
+	</target>
+	<!--
+    <target name="copy" depends="archive">  
+        <copy todir="copy" overwrite="true" includeemptydirs="false">  
+            <fileset dir="dist">  
+                <include name="*.jar"/>  
+            </fileset>  
+        </copy>  
+    </target>  
+    -->
+
+</project>

@@ -60,10 +60,11 @@ public class MyUtil {
 	}
 
 	public static boolean saveFile(String path, String content) {
+		
 
 		try {
 			File file = new File(path);
-			FileWriter fileWriter = new FileWriter(file);
+			FileWriter fileWriter = new FileWriter(file,true);
 			fileWriter.write(content);
 			fileWriter.close();
 		} catch (IOException e) {

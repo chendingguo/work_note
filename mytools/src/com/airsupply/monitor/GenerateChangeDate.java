@@ -3,8 +3,14 @@ package com.airsupply.monitor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
+import com.airsupply.util.JDBCUtil;
 import com.airsupply.util.MyUtil;
 import com.chinadaas.gsinfo.hbase.data.AdministrativePenalty;
 import com.chinadaas.gsinfo.hbase.data.CourtAnnouncement;
@@ -15,16 +21,19 @@ import com.chinadaas.gsinfo.hbase.data.TableConstant.TABLE;
 import com.chinadaas.gsinfo.hbase.data.adapter.table.Basic;
 import com.chinadaas.gsinfo.hbase.data.adapter.table.Person;
 import com.chinadaas.gsinfo.hbase.data.adapter.table.ShareHolder;
+
 /**
  * 按监控数据格式拼结变更项
-
-* <p>Description: </p>
-
-* @author airsupply
-
-* @date 2015年11月2日
-
-* @version 1.0
+ * 
+ * <p>
+ * Description:
+ * </p>
+ * 
+ * @author airsupply
+ * 
+ * @date 2015年11月2日
+ * 
+ * @version 1.0
  */
 public class GenerateChangeDate {
 
@@ -44,7 +53,7 @@ public class GenerateChangeDate {
 			"股权出质" };
 
 	public static void main(String[] args) {
-		 generatePropertyFile();
+		generatePropertyFile();
 
 		createMonitorDataString();
 
@@ -71,13 +80,12 @@ public class GenerateChangeDate {
 				String propertyKey = className + "." + fieldName;
 
 				String propertyValue = changeProperties.getProperty(propertyKey);
-				
 
 				if (propertyValue != null && !propertyValue.isEmpty()
 						&& propertyValue.split(",").length == 2) {
 					String[] values = propertyValue.split(",");
-				//	String sequenceId = RandomTools.getRandom32String(28);
-					String sequenceId ="630000201506151311747041";
+					// String sequenceId = RandomTools.getRandom32String(28);
+					String sequenceId = "630000201506151311747041";
 					stringBuilder.append(className);
 					stringBuilder.append(S001);
 					stringBuilder.append(field.getName().replaceFirst("daas", ""));
@@ -100,7 +108,7 @@ public class GenerateChangeDate {
 					stringBuilder.append(S002);
 				}
 			}
-			
+
 			i++;
 
 		}
@@ -125,20 +133,23 @@ public class GenerateChangeDate {
 				String propertyKey = className + "." + fieldName + "=";
 				String newValue;
 				String oldValue;
-			
-				if(fieldName.indexOf("DATE")>-1){
-					 oldValue="2015-01-01";
-					 newValue="2015-02-02";
-				}else{
-					 oldValue=fieldName+"_1";
-					 newValue=fieldName+"_2";
+
+				if (fieldName.indexOf("DATE") > -1) {
+					oldValue = "2015-01-01";
+					newValue = "2015-02-02";
+				} else {
+					oldValue = fieldName + "_1";
+					newValue = fieldName + "_2";
 				}
-				//新增变更
-				if(i>2){
-					oldValue=" ";
+				// 新增变更
+				if (i > 2) {
+					oldValue = " ";
 				}
-				propertyKey+=oldValue+","+newValue;
-				propBuilder.append(propertyKey + "\n");
+				String colDesc = getColumnName(fieldName);
+				if (!colDesc.isEmpty()) {
+					propertyKey += colDesc;
+					propBuilder.append(propertyKey + "\n");
+				}
 
 			}
 			i++;
@@ -146,6 +157,28 @@ public class GenerateChangeDate {
 		String path = "D:\\gsworkspace\\out_file" + "\\" + changeMonitorFile;
 		MyUtil.saveFile(path, propBuilder.toString());
 		System.out.println("save file success!");
+
+	}
+
+	public static String getColumnName(String fieldName) {
+		String colDesc = "";
+		fieldName = fieldName.replaceAll("daas", "");
+		Connection conn = JDBCUtil.getConn();
+		Statement stmt = null;
+		try {
+			String sql = "SELECT * FROM T_COLUMN where COL_NAME='" + fieldName + "'";
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				colDesc = rs.getString("COL_DESC");
+				return colDesc;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+		return colDesc;
 
 	}
 }

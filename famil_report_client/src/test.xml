@@ -1,0 +1,237 @@
+<chart xAxisMaxValue='100' xAxisMinValue='0' baseFontSize='12'
+	yAxisMaxValue='100' baseFont='10' yAxisMinValue='0' palette='2'
+	showFormBtn='0' is3D='1' canvasBorderThickness='1'>
+	<dataset seriesname='DS'>
+		<set esdate='2010-04-15' pripid='210000-210213000012010041500695'
+			tooltext='大连鹏鸿投资管理有限公司(210213000042244)&#xA;2010-04-15年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;500.00万元'
+			regno='210213000042244' width='100' industryphy='租赁和商务服务业' shape='RECTANGLE'
+			id='196001608' invType='A1' color='FFFFFF' name='大连鹏鸿投资管理有限公司'
+			entStatus='在营（开业）' regcap='500.00万元' />
+		<set id='15383841' color='FFFFFF' tooltext='赵铁' width='100' name='赵铁'
+			certNo='210213197212310523' radius='23' shape='CIRCLE' cerType='1' />
+		<set esdate='2006-01-12' pripid='220000-bbe00008-e61c-4c73-b5e6-222975fd188e'
+			tooltext='吉林鹏鸿木业有限公司(220724000000415)&#xA;2006-01-12年成立&#xA;在营（开业）&#xA;农、林、牧、渔业&#xA;5000.00万元'
+			regno='220724000000415' width='100' industryphy='农、林、牧、渔业' shape='RECTANGLE'
+			id='226249827' invType='A1' color='FFFFFF' name='吉林鹏鸿木业有限公司'
+			entStatus='在营（开业）' regcap='5000.00万元' />
+		<set esdate='1999-03-11' pripid='210000-210213000021999031100114'
+			tooltext='大连金州鹏飞木业有限公司(2102002110241)&#xA;1999-03-11年成立&#xA;吊销&#xA;制造业&#xA;100.00万元'
+			regno='2102002110241' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='212041334' invType='A1' color='FFFFFF' name='大连金州鹏飞木业有限公司'
+			entStatus='吊销' regcap='100.00万元' />
+		<set esdate='2008-04-01' pripid='220000-9c977100-8dda-4a44-8e63-f8a3da3613e6'
+			tooltext='扶余吉福特木业有限公司(220724000000917)&#xA;2008-04-01年成立&#xA;吊销&#xA;制造业&#xA;10.00万元'
+			regno='220724000000917' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='205215664' invType='A1' color='FFFFFF' name='扶余吉福特木业有限公司'
+			entStatus='吊销' regcap='10.00万元' />
+		<set esdate='2013-12-20' pripid='440000-440301001012013122005150'
+			tooltext='深圳中腾汉资基金管理有限公司(440301108542719)&#xA;2013-12-20年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;1000.00万元'
+			regno='440301108542719' width='100' industryphy='租赁和商务服务业' shape='RECTANGLE'
+			id='219177421' invType='A1' color='FFFFFF' name='深圳中腾汉资基金管理有限公司'
+			entStatus='在营（开业）' regcap='1000.00万元' />
+		<set esdate='2002-09-24' pripid='210000-210200000022002092400041'
+			tooltext='大连鹏鸿化工有限公司(210200000160137)&#xA;2002-09-24年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;50.00万元'
+			regno='210200000160137' width='100' industryphy='批发和零售业' shape='RECTANGLE'
+			id='142226733' invType='A1' color='FFFFFF' name='大连鹏鸿化工有限公司'
+			entStatus='在营（开业）' regcap='50.00万元' />
+		<set esdate='2015-04-02' pripid='210000-210212000022015040200971'
+			tooltext='大连八方有家养老服务有限公司(210212000075315)&#xA;2015-04-02年成立&#xA;在营（开业）&#xA;居民服务、修理和其他服务业&#xA;1000.00万元'
+			regno='210212000075315' width='100' industryphy='居民服务、修理和其他服务业'
+			shape='RECTANGLE' id='164051249' invType='A1' color='FFFFFF' name='大连八方有家养老服务有限公司'
+			entStatus='在营（开业）' regcap='1000.00万元' />
+		<set id='38386282' color='FFFFFF' tooltext='赵玉林' width='100' name='赵玉林'
+			certNo='210213196204150510' radius='23' shape='CIRCLE' cerType='1' />
+		<set esdate='2011-07-15' pripid='210000-210200000012011071500723'
+			tooltext='大连宝星源典当有限公司(210200000449883)&#xA;2011-07-15年成立&#xA;在营（开业）&#xA;金融业&#xA;500.00万元'
+			regno='210200000449883' width='100' industryphy='金融业' shape='RECTANGLE'
+			id='139277376' invType='A1' color='FFFFFF' name='大连宝星源典当有限公司'
+			entStatus='在营（开业）' regcap='500.00万元' />
+		<set id='62073541' color='FFFFFF' tooltext='高淑艳' width='100' name='高淑艳'
+			certNo='222324195806010623' radius='23' shape='CIRCLE' cerType='1' />
+		<set id='6260360' color='FFFFFF' tooltext='赵晓涛' width='100' name='赵晓涛'
+			certNo='210213196607030521' radius='23' shape='CIRCLE' cerType='1' />
+		<set esdate='2003-06-26' pripid='210000-210213000012003062600243'
+			tooltext='大连鹏鸿合板有限公司(210213000042236)&#xA;2003-06-26年成立&#xA;在营（开业）&#xA;制造业&#xA;1000.00万元'
+			regno='210213000042236' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='217014809' invType='A1' color='FFFFFF' name='大连鹏鸿合板有限公司'
+			entStatus='在营（开业）' regcap='1000.00万元' />
+		<set id='41397041' color='FFFFFF' tooltext='彭宗军' width='100' name='彭宗军'
+			certNo='513701197305047918' radius='23' shape='CIRCLE' cerType='1' />
+		<set esdate='2006-08-02' pripid='210000-210213000022006080200290'
+			tooltext='大连瑞石木业有限公司(210213000013706)&#xA;2006-08-02年成立&#xA;在营（开业）&#xA;制造业&#xA;500.00万元'
+			regno='210213000013706' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='185065006' invType='A1' color='FFFFFF' name='大连瑞石木业有限公司'
+			entStatus='在营（开业）' regcap='500.00万元' />
+		<set esdate='2013-05-13' pripid='220000-9babea32-013e-1000-e000-fb52c0a80101'
+			tooltext='吉林鹏鸿地板有限公司(220724000014154)&#xA;2013-05-13年成立&#xA;在营（开业）&#xA;制造业&#xA;2000.00万元'
+			regno='220724000014154' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='135237685' invType='A1' color='FFFFFF' name='吉林鹏鸿地板有限公司'
+			entStatus='在营（开业）' regcap='2000.00万元' />
+		<set id='53042009' color='FFFFFF' tooltext='谷雨' width='100' name='谷雨'
+			certNo='220721198204010233' radius='23' shape='CIRCLE' cerType='1' />
+		<set esdate='2004-08-24' pripid='210000-210213000022004082400406'
+			tooltext='大连浩展地板有限公司(2102132101054)&#xA;2004-08-24年成立&#xA;吊销&#xA;制造业&#xA;50.00万元'
+			regno='2102132101054' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='239080302' invType='A1' color='FFFFFF' name='大连浩展地板有限公司'
+			entStatus='吊销' regcap='50.00万元' />
+		<set esdate='2012-12-12' pripid='210000-210246000022012121200614'
+			tooltext='大连中腾汉资投资咨询中心(有限合伙)(210246000011888)&#xA;2012-12-12年成立&#xA;在营（开业）&#xA;租赁和商务服务业&#xA;10.00万元'
+			regno='210246000011888' width='100' industryphy='租赁和商务服务业' shape='RECTANGLE'
+			id='218133625' invType='A1' color='FFFFFF' name='大连中腾汉资投资咨询中心(有限合伙)'
+			entStatus='在营（开业）' regcap='10.00万元' />
+		<set esdate='2007-01-05' pripid='210000-210213000022007010500110'
+			tooltext='大连久缘商贸有限公司(210213000048992)&#xA;2007-01-05年成立&#xA;在营（开业）&#xA;批发和零售业&#xA;50.00万元'
+			regno='210213000048992' width='100' industryphy='批发和零售业' shape='RECTANGLE'
+			id='202236272' invType='A1' color='FFFFFF' name='大连久缘商贸有限公司'
+			entStatus='在营（开业）' regcap='50.00万元' />
+		<set esdate='2004-10-18' pripid='210000-21020000008200410180006X'
+			tooltext='大连鹏鸿地板有限公司(210200400004017)&#xA;2004-10-18年成立&#xA;在营（开业）&#xA;制造业&#xA;500.00万元'
+			regno='210200400004017' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='138295236' invType='A1' color='FFFFFF' name='大连鹏鸿地板有限公司'
+			entStatus='在营（开业）' regcap='500.00万元' />
+		<set esdate='2012-07-06' pripid='210000-210213000022012070600312'
+			tooltext='大连金鹏阻燃木制品有限公司(210213000083670)&#xA;2012-07-06年成立&#xA;在营（开业）&#xA;制造业&#xA;20.00万元'
+			regno='210213000083670' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='190182889' invType='A1' color='FFFFFF' name='大连金鹏阻燃木制品有限公司'
+			entStatus='在营（开业）' regcap='20.00万元' />
+		<set esdate='1999-10-26' pripid='210000-210213000021999102600037'
+			tooltext='大连鹏鸿木业集团有限公司(210213000042252)&#xA;1999-10-26年成立&#xA;在营（开业）&#xA;制造业&#xA;5000.00万元'
+			regno='210213000042252' width='100' industryphy='制造业' shape='RECTANGLE'
+			id='155093324' invType='A1' color='FFFFFF' name='大连鹏鸿木业集团有限公司'
+			entStatus='在营（开业）' regcap='5000.00万元' />
+		<set esdate='2010-07-28' pripid='210000-210200000012010072800109'
+			tooltext='大连中山大德通小额贷款有限公司(210200000078218)&#xA;2010-07-28年成立&#xA;在营（开业）&#xA;金融业&#xA;3000.00万元'
+			regno='210200000078218' width='100' industryphy='金融业' shape='RECTANGLE'
+			id='132137223' invType='A1' color='FFFFFF' name='大连中山大德通小额贷款有限公司'
+			entStatus='在营（开业）' regcap='3000.00万元' />
+		<set id='39424072' color='FFFFFF' tooltext='赵玉林' width='100' name='赵玉林'
+			certNo='210213196204150550' radius='23' shape='CIRCLE' cerType='1' />
+		<set esdate='2002-10-09' pripid='210000-210200000022002100900426'
+			tooltext='大连鹏鸿木业有限公司家饰城销售分公司(2102002210808)&#xA;2002-10-09年成立&#xA;注销&#xA;批发和零售业&#xA;0.00万元'
+			regno='2102002210808' width='100' industryphy='批发和零售业' shape='RECTANGLE'
+			id='124011564' invType='A1' color='FFFFFF' name='大连鹏鸿木业有限公司家饰城销售分公司'
+			entStatus='注销' regcap='0.00万元' />
+		<set esdate='2001-07-16' pripid='210000-210212000022001071600057'
+			tooltext='大连日堃房地产开发有限公司(210212000006565)&#xA;2001-07-16年成立&#xA;在营（开业）&#xA;房地产业&#xA;10000.00万元'
+			regno='210212000006565' width='100' industryphy='房地产业' shape='RECTANGLE'
+			id='229017176' invType='A1' color='FFFFFF' name='大连日堃房地产开发有限公司'
+			entStatus='在营（开业）' regcap='10000.00万元' />
+		<set esdate='2002-09-12' pripid='210000-210200000022002091200355'
+			tooltext='大连鹏鸿木业有限公司兴业销售分公司(2102002210759)&#xA;2002-09-12年成立&#xA;注销&#xA;批发和零售业&#xA;0.00万元'
+			regno='2102002210759' width='100' industryphy='批发和零售业' shape='RECTANGLE'
+			id='198152568' invType='A1' color='FFFFFF' name='大连鹏鸿木业有限公司兴业销售分公司'
+			entStatus='注销' regcap='0.00万元' />
+		<set esdate='2013-04-02' pripid='210000-210212000022013040200286'
+			tooltext='大连鹏鸿久泰物业管理有限公司(210212000059044)&#xA;2013-04-02年成立&#xA;在营（开业）&#xA;房地产业&#xA;200.00万元'
+			regno='210212000059044' width='100' industryphy='房地产业' shape='RECTANGLE'
+			id='150227203' invType='A1' color='FFFFFF' name='大连鹏鸿久泰物业管理有限公司'
+			entStatus='在营（开业）' regcap='200.00万元' />
+	</dataset>
+	<connectors stdThickness='1'>
+		<connector to='212041334'
+			trips='{condate=1999-03-11, conprop=90.0, subconam=90.00, tripsScaleStr=90.0%, tripsCny=null, invType=B1C1, postion=执行董事, regcap=100.00}'
+			color='null' from='38386282' />
+		<connector to='150227203'
+			trips='{condate=2013-03-22, conprop=51.0, subconam=102.00, tripsScaleStr=51.0%, tripsCny=null, invType=C1B1, postion=执行董事兼总经理, regcap=200.00}'
+			color='null' from='38386282' />
+		<connector to='135237685'
+			trips='{condate=2013-05-10, conprop=0.30000001192092896, subconam=600.00, tripsScaleStr=30.0%, tripsCny=人民币, invType=B1C1, postion=监事, regcap=2000.00}'
+			color='null' from='6260360' />
+		<connector to='139277376'
+			trips='{condate=2011-07-15, conprop=52.0, subconam=260.00, tripsScaleStr=52.0%, tripsCny=null, invType=A1, postion=null, regcap=500.00}'
+			color='null' from='217014809' />
+		<connector to='164051249'
+			trips='{condate=1900-01-01, conprop=70.0, subconam=700.00, tripsScaleStr=70.0%, tripsCny=null, invType=B1C1, postion=执行董事兼总经理, regcap=1000.00}'
+			color='null' from='38386282' />
+		<connector to='142226733'
+			trips='{condate=2002-09-20, conprop=5.0, subconam=2.50, tripsScaleStr=5.0%, tripsCny=null, invType=A1, postion=null, regcap=50.00}'
+			color='null' from='155093324' />
+		<connector to='205215664'
+			trips='{condate=2008-04-01, conprop=0.49000000953674316, subconam=4.90, tripsScaleStr=49.0%, tripsCny=人民币, invType=C1B1, postion=监事, regcap=10.00}'
+			color='null' from='38386282' />
+		<connector to='142226733' 
+			trips='{condate=2002-09-20, conprop=55.0, subconam=27.50, tripsScaleStr=55.0%, tripsCny=null, invType=B1C1, postion=执行董事, regcap=50.00}'
+			color='null' from='15383841' />
+		<connector to='138295236'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=监事, regcap=500.00}'
+			color='null' from='6260360' />
+		<connector to='190182889'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=监事, regcap=20.00}'
+			color='null' from='38386282' />
+		<connector to='219177421'
+			trips='{condate=1900-01-01, conprop=0.10000000149011612, subconam=100.00, tripsScaleStr=10.0%, tripsCny=人民币, invType=B1, postion=null, regcap=1000.00}'
+			color='null' from='38386282' />
+		<connector to='139277376'
+			trips='{condate=2011-07-15, conprop=16.0, subconam=80.00, tripsScaleStr=16.0%, tripsCny=null, invType=C1B1, postion=执行董事兼总经理, regcap=500.00}'
+			color='null' from='53042009' />
+		<connector to='198152568'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=负责人, regcap=1.00}'
+			color='null' from='38386282' />
+		<connector to='217014809'
+			trips='{condate=2003-09-02, conprop=20.0, subconam=200.00, tripsScaleStr=20.0%, tripsCny=null, invType=C1B1, postion=监事, regcap=1000.00}'
+			color='null' from='6260360' />
+		<connector to='142226733'
+			trips='{condate=2002-09-20, conprop=40.0, subconam=20.00, tripsScaleStr=40.0%, tripsCny=null, invType=C1B1, postion=监事, regcap=50.00}'
+			color='null' from='41397041' />
+		<connector to='196001608'
+			trips='{condate=2010-04-02, conprop=20.0, subconam=100.00, tripsScaleStr=20.0%, tripsCny=null, invType=C1B1, postion=监事, regcap=500.00}'
+			color='null' from='6260360' />
+		<connector to='217014809'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=执行董事兼总经理, regcap=1000.00}'
+			color='null' from='39424072' />
+		<connector to='196001608'
+			trips='{condate=2010-04-02, conprop=20.0, subconam=100.00, tripsScaleStr=20.0%, tripsCny=null, invType=C1B1, postion=执行董事兼总经理, regcap=500.00}'
+			color='null' from='38386282' />
+		<connector to='226249827'
+			trips='{condate=2013-12-25, conprop=0.6499999761581421, subconam=3250.00, tripsScaleStr=65.0%, tripsCny=人民币, invType=B1C1, postion=监事, regcap=5000.00}'
+			color='null' from='6260360' />
+		<connector to='124011564'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=负责人, regcap=1.00}'
+			color='null' from='38386282' />
+		<connector to='185065006'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=监事, regcap=500.00}'
+			color='null' from='6260360' />
+		<connector to='132137223'
+			trips='{conprop=0.0, subconam=0.00, tripsScaleStr=, tripsCny=null, invType=C1, postion=董事, regcap=3000.00}'
+			color='null' from='38386282' />
+		<connector to='155093324'
+			trips='{condate=1999-10-26, conprop=50.0, subconam=2500.00, tripsScaleStr=50.0%, tripsCny=null, invType=B1C1, postion=执行董事, regcap=5000.00}'
+			color='null' from='38386282' />
+		<connector to='196001608'
+			trips='{condate=2010-04-02, conprop=60.0, subconam=300.00, tripsScaleStr=60.0%, tripsCny=null, invType=A1, postion=null, regcap=500.00}'
+			color='null' from='155093324' />
+		<connector to='229017176'
+			trips='{condate=2013-10-25, conprop=51.0, subconam=5100.00, tripsScaleStr=51.0%, tripsCny=null, invType=C1B1, postion=执行董事兼总经理, regcap=10000.00}'
+			color='null' from='38386282' />
+		<connector to='135237685'
+			trips='{condate=2013-05-10, conprop=0.3499999940395355, subconam=700.00, tripsScaleStr=35.0%, tripsCny=人民币, invType=B1, postion=null, regcap=2000.00}'
+			color='null' from='38386282' />
+		<connector to='218133625'
+			trips='{condate=1900-01-01, conprop=10.0, subconam=1.00, tripsScaleStr=10.0%, tripsCny=null, invType=B1, postion=null, regcap=10.00}'
+			color='null' from='38386282' />
+		<connector to='190182889'
+			trips='{condate=2012-07-03, conprop=100.0, subconam=20.00, tripsScaleStr=100.0%, tripsCny=null, invType=C1B1, postion=执行董事兼总经理, regcap=20.00}'
+			color='null' from='6260360' />
+		<connector to='155093324'
+			trips='{condate=1999-10-26, conprop=50.0, subconam=2500.00, tripsScaleStr=50.0%, tripsCny=null, invType=B1C1, postion=监事, regcap=5000.00}'
+			color='null' from='6260360' />
+		<connector to='217014809'
+			trips='{condate=2003-09-02, conprop=60.0, subconam=600.00, tripsScaleStr=60.0%, tripsCny=null, invType=A1, postion=null, regcap=1000.00}'
+			color='null' from='155093324' />
+		<connector to='212041334'
+			trips='{condate=1999-03-11, conprop=10.0, subconam=10.00, tripsScaleStr=10.0%, tripsCny=null, invType=B1C1, postion=监事, regcap=100.00}'
+			color='null' from='6260360' />
+		<connector to='239080302'
+			trips='{condate=2004-08-24, conprop=59.5, subconam=29.75, tripsScaleStr=59.0%, tripsCny=null, invType=B1C1, postion=执行董事, regcap=50.00}'
+			color='null' from='38386282' />
+		<connector to='139277376'
+			trips='{condate=2011-07-15, conprop=16.0, subconam=80.00, tripsScaleStr=16.0%, tripsCny=null, invType=B1C1, postion=监事, regcap=500.00}'
+			color='null' from='62073541' />
+		<connector to='217014809'
+			trips='{condate=2003-09-02, conprop=20.0, subconam=200.00, tripsScaleStr=20.0%, tripsCny=null, invType=B1, postion=null, regcap=1000.00}'
+			color='null' from='38386282' />
+		<connector to='139277376'
+			trips='{condate=2011-07-15, conprop=16.0, subconam=80.00, tripsScaleStr=16.0%, tripsCny=null, invType=A1, postion=null, regcap=500.00}'
+			color='null' from='202236272' />
+	</connectors>
+</chart>
