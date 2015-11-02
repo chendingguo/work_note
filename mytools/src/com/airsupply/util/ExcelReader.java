@@ -19,10 +19,7 @@ import com.chinadaas.gsinfo.core.utils.StringUtils;
  * 操作Excel表格的功能类
  */
 public class ExcelReader {
-	private POIFSFileSystem fs;
-	private HSSFWorkbook wb;
-	private HSSFSheet sheet;
-	private HSSFRow row;
+	
 
 	public static List<String> getSqlList(InputStream in) {
 		List<String> sqlList=new ArrayList<String>();
@@ -110,7 +107,6 @@ public class ExcelReader {
 			in = new FileInputStream(f);
 			getSqlList(in);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

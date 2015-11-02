@@ -15,13 +15,24 @@ import com.chinadaas.gsinfo.hbase.data.TableConstant.TABLE;
 import com.chinadaas.gsinfo.hbase.data.adapter.table.Basic;
 import com.chinadaas.gsinfo.hbase.data.adapter.table.Person;
 import com.chinadaas.gsinfo.hbase.data.adapter.table.ShareHolder;
+/**
+ * 按监控数据格式拼结变更项
 
+* <p>Description: </p>
+
+* @author airsupply
+
+* @date 2015年11月2日
+
+* @version 1.0
+ */
 public class GenerateChangeDate {
 
 	public static final String S001 = "\u0001";
 	public static final String S002 = "\u0002";
 	public static final String S003 = "\u0003";
 	public static final String changeMonitorFile = "monitor_change.properties";
+	@SuppressWarnings("rawtypes")
 	static Class[] classes = { Basic.class, ShareHolder.class, Person.class,
 			PunishBreakRecord.class, CourtAnnouncement.class, AdministrativePenalty.class,
 			MonSharesFrost.class, MonSharesImpawn.class };
@@ -39,6 +50,7 @@ public class GenerateChangeDate {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static String createMonitorDataString() {
 		// ENTERPRISEBASEINFOCOLLECT,E_GT_BASEINFO,E_INV_INVESTMENT,E_PRI_PERSON,E_GT_PERSON
 		Properties changeProperties = new Properties();
@@ -98,6 +110,7 @@ public class GenerateChangeDate {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static void generatePropertyFile() {
 
 		StringBuilder propBuilder = new StringBuilder();

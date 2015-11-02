@@ -80,8 +80,7 @@ public class MyUtil {
 		String content = "";
 		try {
 			FileInputStream fileInputStream = new FileInputStream(Path);
-			InputStreamReader inputStreamReader = new InputStreamReader(
-					fileInputStream, "UTF-8");
+			InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
 			reader = new BufferedReader(inputStreamReader);
 			String tempString = null;
 			while ((tempString = reader.readLine()) != null) {
@@ -108,8 +107,7 @@ public class MyUtil {
 		BufferedReader reader = null;
 		try {
 			FileInputStream fileInputStream = new FileInputStream(Path);
-			InputStreamReader inputStreamReader = new InputStreamReader(
-					fileInputStream, "UTF-8");
+			InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
 			reader = new BufferedReader(inputStreamReader);
 			String tempString = null;
 			while ((tempString = reader.readLine()) != null) {
@@ -138,9 +136,6 @@ public class MyUtil {
 		return ids;
 	}
 
-	
-
-
 	public static List<GroupCategory> getAddGroupCategorys() {
 
 		List<GroupCategory> gcs = new ArrayList<GroupCategory>();
@@ -153,10 +148,9 @@ public class MyUtil {
 		gcs.add(groupCategory);
 		return gcs;
 	}
-	
-	
-	public static String getConfigValue(String fileName,String key) {
-		InputStream in=MyUtil.class.getClassLoader().getResourceAsStream(fileName);
+
+	public static String getConfigValue(String fileName, String key) {
+		InputStream in = MyUtil.class.getClassLoader().getResourceAsStream(fileName);
 		try {
 			Properties prop = new Properties();
 			prop.load(in);
@@ -169,7 +163,5 @@ public class MyUtil {
 		}
 		return "";
 	}
-	
-	
 
 }

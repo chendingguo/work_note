@@ -1,4 +1,5 @@
 package com.airsupply.monitor;
+
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -27,7 +28,17 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import com.airsupply.monitor.GenerateChangeDate;
 import com.common.utils.StringUtils;
+/**
+ * hbase操作类
 
+* <p>Description: </p>
+
+* @author airsupply
+
+* @date 2015年11月2日
+
+* @version 1.0
+ */
 public class Hbase {
 
 	// 声明静态配置
@@ -45,10 +56,7 @@ public class Hbase {
 	 * @family 列族列表
 	 */
 	public static void creatTable(String tableName, String[] family) throws Exception {
-
-		Configuration conf = HBaseConfiguration.create();
-		// conf.set("hbase.zookeeper.quorum", "192.168.139.129");
-		// conf.set("hbase.zookeeper.property.clientPort", "2181");
+		@SuppressWarnings("resource")
 		HBaseAdmin admin = new HBaseAdmin(conf);
 		HTableDescriptor desc = new HTableDescriptor();
 		for (int i = 0; i < family.length; i++) {
@@ -204,6 +212,7 @@ public class Hbase {
 	public static void updateTable(String tableName, String rowKey, String familyName,
 			String columnName, String value) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Put put = new Put(Bytes.toBytes(rowKey));
 		put.add(Bytes.toBytes(familyName), Bytes.toBytes(columnName), Bytes.toBytes(value));
@@ -225,6 +234,7 @@ public class Hbase {
 	public static void getResultByVersion(String tableName, String rowKey, String familyName,
 			String columnName) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Get get = new Get(Bytes.toBytes(rowKey));
 		get.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(columnName));
@@ -258,6 +268,7 @@ public class Hbase {
 	public static void deleteColumn(String tableName, String rowKey, String falilyName,
 			String columnName) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Delete deleteColumn = new Delete(Bytes.toBytes(rowKey));
 		deleteColumn.deleteColumns(Bytes.toBytes(falilyName), Bytes.toBytes(columnName));
@@ -274,6 +285,7 @@ public class Hbase {
 	 */
 	public static void deleteAllColumn(String tableName, String rowKey) throws IOException {
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Delete deleteAll = new Delete(Bytes.toBytes(rowKey));
 		table.delete(deleteAll);
@@ -287,6 +299,7 @@ public class Hbase {
 	 */
 	public static void deleteTable(String tableName) throws IOException {
 
+		@SuppressWarnings("resource")
 		HBaseAdmin admin = new HBaseAdmin(conf);
 		admin.disableTable(tableName);
 		admin.deleteTable(tableName);
@@ -304,11 +317,6 @@ public class Hbase {
 		// conf.set("zookeeper.znode.parent", "/hbase1");
 		// conf.setInt("hbase.zookeeper.property.clientPort", 2181);
 		conf.set("hbase.rpc.timeout", "600000");
-		// try {
-		// table = new HTable(conf, tableName);
-		// } catch (IOException e) {
-		// e.printStackTrace();
-		// }
 
 		// conf.set("hbase.zookeeper.quorum", "192.168.139.129");
 	}
@@ -327,7 +335,6 @@ public class Hbase {
 				System.out.println("-------------------------------------------");
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -344,6 +351,7 @@ public class Hbase {
 			String columnName) throws IOException {
 		System.out.println("getResultByColumn------------------");
 
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		Get get = new Get(Bytes.toBytes(rowKey));
 		get.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(columnName)); // 获取指定列族和列修饰符对应的列
@@ -371,9 +379,9 @@ public class Hbase {
 	 * @tableName 表名
 	 */
 	public static void getResultScann(String tableName) throws IOException {
-		int count = 0;
 		Scan scan = new Scan();
 		ResultScanner rs = null;
+		@SuppressWarnings("resource")
 		HTable table = new HTable(conf, Bytes.toBytes(tableName));
 		try {
 			String split = StringUtils.S001;
@@ -387,10 +395,7 @@ public class Hbase {
 			rs = table.getScanner(scan);
 
 			for (Result r : rs) {
-				count++;
 				for (KeyValue kv : r.list()) {
-					String rowKey = Bytes.toString(kv.getRow());
-
 					System.out.println("row:" + Bytes.toString(kv.getRow()));
 					System.out.println("family:" + Bytes.toString(kv.getFamily()));
 					System.out.println("qualifier:" + Bytes.toString(kv.getQualifier()));
@@ -460,14 +465,13 @@ public class Hbase {
 			System.out.println(Bytes.toString(aValue));
 
 			String changedValue = GenerateChangeDate.createMonitorDataString();
-            byte[] fullChange=Bytes.toBytes(changedValue);
+			byte[] fullChange = Bytes.toBytes(changedValue);
 			putData(userPushTable, newKey, "f", "A", fullChange);
-		
+
 			// ----------------------------------------------------"E" column
 			byte[] eValue = getResultByColumn(userPushTable, rowKey, "f", "E");
 			putData(userPushTable, newKey, "f", "E", eValue);
 		}
 	}
-	// e ent base info
 
 }
