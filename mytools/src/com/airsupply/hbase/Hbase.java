@@ -458,7 +458,7 @@ public class Hbase {
 		String entTableName = "ENTERPRISEBASEINFOCOLLECT"+dateStr;
 		String tableName = "E_INV_INVESTMENT" + dateStr;
 		String personTable = "E_PRI_PERSON" + dateStr;
-		String resultTable = "RESULT";
+		String resultTable = "result";
 		String userPushTable = "USER_PUSH";
 		String alertLogTable = "ALTER_LOG";
 

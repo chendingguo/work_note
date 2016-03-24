@@ -12,14 +12,13 @@ import org.dom4j.Node;
 
 import com.chinadaas.gsinfo.query.front.webservice.service.EntInfoQueryService;
 import com.chinadaas.util.ClientTool;
-import com.ibm.wsdl.util.StringUtils;
 
 public class CallbleOperatorThread implements Callable<String> {
 	private static Logger log = Logger.getLogger(CallbleOperatorThread.class);
 	private int retryNumber = 0;
 	String retryMaxNumberStr = ClientTool.getProperty("monitor.add.retry.max.number");
-	 EntInfoClient entInfoClient=new EntInfoClient();
-	EntInfoQueryService entInfoService;
+	
+	
 	// 企业名称
 	public String entName;
 	// 组织机构代码
@@ -37,7 +36,8 @@ public class CallbleOperatorThread implements Callable<String> {
 	public String addMonitorOrder() {
 		//System.out.println("|-----------------add new monitor order:" + entName);
 		String errorCode ="";
-		entInfoService = entInfoClient.getEntInfoService();
+		EntInfoClient entInfoClient=new EntInfoClient();
+		EntInfoQueryService entInfoService = entInfoClient.getEntInfoService();
 		String queryXml = getMonitorOrderAddParameterXml();
 		String encodeQueryXml = ClientTool.encryPostDataXml(queryXml);
 		try {

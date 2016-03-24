@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 import com.chinadaas.util.ClientTool;
 
 public class CCBMonitorAdd {
-	private static Logger log = Logger.getLogger(OperatorThread.class);
+	private static Logger log = Logger.getLogger(CCBMonitorAdd.class);
 
 	public static void executeBatchAddMonitor() {
 		long start = System.currentTimeMillis();
@@ -43,8 +43,8 @@ public class CCBMonitorAdd {
 			for (Future<String> fs : results) {
 				try {
 					String str = String.valueOf(fs.get());
-					if (!str.isEmpty() && str.split(":").length == 2) {
-						String errorCode = str.split(":")[1];
+					if (!str.isEmpty() && str.split(",").length == 2) {
+						String errorCode = str.split(",")[1];
 						if (!errorCode.isEmpty()) {
 							log.error("ERROR ENT:" + str);
 						}

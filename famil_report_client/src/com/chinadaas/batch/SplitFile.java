@@ -47,23 +47,22 @@ public class SplitFile {
 			OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
 
 			System.out.println("|--start write  file   " + batchFile.getName());
-			while ((lineStr = reader.readLine()) != null && !lineStr.isEmpty()) {
+			while ((lineStr = reader.readLine()) != null) {
+				if (!lineStr.isEmpty()) {
+					if (count > 0 && count % maxLineNum == 0) {
+						fos.close();
+						batchNo++;
+						formatBatchNo = df.format(batchNo);
+						batchFile = new File(inputPath + "/" + formatBatchNo + ".txt");
+						fos = new FileOutputStream(batchFile);
+						osw = new OutputStreamWriter(fos, "UTF-8");
+						System.out.println("|--start write  file   " + batchFile.getName());
 
-				if (count > 0 && count % maxLineNum == 0) {
-					fos.close();
-					batchNo++;
-
-					formatBatchNo = df.format(batchNo);
-					batchFile = new File(inputPath + "/" + formatBatchNo + ".txt");
-					fos = new FileOutputStream(batchFile);
-					osw = new OutputStreamWriter(fos, "UTF-8");
-					System.out.println("|--start write  file   " + batchFile.getName());
-
+					}
+					osw.write(lineStr + "\n");
+					osw.flush();
+					count++;
 				}
-				osw.write(lineStr + "\n");
-				osw.flush();
-				count++;
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -74,5 +73,4 @@ public class SplitFile {
 		System.out.println("共读到" + count + "条记录 Used" + used + "S");
 
 	}
-
 }

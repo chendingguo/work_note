@@ -42,10 +42,11 @@ public class AddNewMonitroOrder {
 		String url = MyUtil.getConfigValue("jdbc.properties", "jdbc.system.url");
 		String userName = MyUtil.getConfigValue("jdbc.properties", "jdbc.system.username");
 		String userPassword = MyUtil.getConfigValue("jdbc.properties", "jdbc.system.password");
+		String driver= MyUtil.getConfigValue("jdbc.properties","jdbc.driver");
 		Connection conn = null;
 		Statement stmt = null;
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName(driver);
 			conn = DriverManager.getConnection(url, userName, userPassword);
 			stmt = conn.createStatement();// 提交sql语句,创建一个Statement对象来将SQL语句发送到数据库
 			// ************************删除订单数据***********************************************
@@ -98,7 +99,7 @@ public class AddNewMonitroOrder {
 		delOrderNo = new String[] { "955940000000000000001", "955940000000000000002" };
 		// String filePath = "D:\\gsworkspace\\input_file\\table-1115-1119.xls";
 		//String filePath = "D:\\gsworkspace\\input_file\\table-1108-1112.xls";
-		String filePath = "D:\\gsworkspace\\input_file\\table-1101-1105.xls";
+		String filePath = "D:\\gsworkspace\\input_file\\pro.xls";
 		// String filePath = "D:\\gsworkspace\\input_file\\table-1025-1029.xls";
 		//String filePath = "D:\\gsworkspace\\input_file\\table-1018-1022.xls";
 		excelFile = new File(filePath);

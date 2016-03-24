@@ -18,7 +18,7 @@ public class TestFamilyNode {
 		id="205000725";
 		
 		//养牛人
-		id="321000714";
+		//id="321000714";
 		FamilyTreeNode fnode = factory.createFamilyTree(id);
 		fnode.traverse();
 

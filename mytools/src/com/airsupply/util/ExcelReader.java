@@ -52,9 +52,11 @@ public class ExcelReader {
 				String[] types = new String[typeRow.getLastCellNum() + 1];
 				for (int k = 0; k < typeRow.getLastCellNum(); k++) {
 					HSSFCell cell = typeRow.getCell(k);
-					if (null != cell) {
+					if (null != cell&&cell.getCellType()==HSSFCell.CELL_TYPE_STRING) {
 						types[k] = cell.getStringCellValue();
-					} else {
+					} else if(null != cell&&cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC) {
+						types[k] = String.valueOf(cell.getNumericCellValue());
+					}else{
 						System.out.print("types can't be null");
 					}
 				}
@@ -66,8 +68,8 @@ public class ExcelReader {
 					if (null != row) {
 						for (int k = 0; k <= heads.length - 1; k++) {
 							HSSFCell cell = row.getCell(k);
-							String value;
-							if (null != cell) {
+							String value = null;
+							if (null != cell&&cell.getCellType()==HSSFCell.CELL_TYPE_STRING) {
 								value = cell.getStringCellValue();
 								if (types[k].equalsIgnoreCase("Date")) {
 									value = "to_date('" + value + "'," + "'yyyy/mm/dd hh24:mi:ss')";
@@ -78,8 +80,11 @@ public class ExcelReader {
 									value = "'" + value + "'";
 								}
 
-							} else {
-								value = "''";
+							} else   if(null != cell&&cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
+								String accountValue=String.valueOf(cell.getNumericCellValue()).replaceAll(",", "");
+								value = "'" + accountValue + "'";
+							}else{
+								value = "'0'";
 							}
 
 							sqlValueBuilder.append(value).append(",");
