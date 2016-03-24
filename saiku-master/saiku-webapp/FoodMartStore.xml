@@ -1,0 +1,39 @@
+<Schema name="Sales" metamodelVersion="4.0">
+	<PhysicalSchema>
+		<Table name="sales_fact_1997" />
+		<Table name="customer" />
+		<Table name="time_by_day" />
+	</PhysicalSchema>
+	<Cube name="Sales">
+		<Dimensions>
+			<Dimension name="Customer" table="customer" key="Id">
+				<Attributes>
+
+					<Attribute name='Gender' keyColumn='gender' />
+					<Attribute name='Id' keyColumn='customer_id' />
+				</Attributes>
+			</Dimension>
+
+		</Dimensions>
+		<MeasureGroups>
+			<MeasureGroup name="Sales" table="sales_fact_1997">
+				<Measures>
+					<Measure name="Unit Sales" column="unit_sales" aggregator="sum"
+						formatString="#,###" />
+					<Measure name="Store Sales" column="store_sales"
+						aggregator="sum" formatString="#,###.##" />
+					<Measure name="Store Cost" column="store_cost" aggregator="sum"
+						formatString="#,###.00" />
+				</Measures>
+				<DimensionLinks>
+					<ForeignKeyLink dimension="Customer"
+						foreignKeyColumn="customer_id" />
+					
+				</DimensionLinks>
+				
+			</MeasureGroup>
+			
+		</MeasureGroups>
+		
+	</Cube>
+</Schema>
