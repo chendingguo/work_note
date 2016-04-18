@@ -1,0 +1,6 @@
+[{"pjName":"project-1","pass":"11","fail":"12","skip":"13"},
+{"pjName":"project-2","pass":"21","fail":"22","skip":"23"},
+{"pjName":"project-3","pass":"31","fail":"32","skip":"33"},
+{"pjName":"project-4","pass":"41","fail":"42","skip":"43"},
+{"pjName":"project-5","pass":"51","fail":"52","skip":"53"},
+{"pjName":"project-6","pass":"61","fail":"62","skip":"63"}]

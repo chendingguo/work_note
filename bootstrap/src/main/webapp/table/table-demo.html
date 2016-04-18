@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>bootstrap table</TITLE>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+<link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="../bootstrap-3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../bootstrap-table/bootstrap-table.css">
+<link href="../bootstrap-3.3.5/css/bootstrap-datetimepicker.min.css"
+	rel="stylesheet" media="screen">
+<script src="../jquery/jquery.min.js"></script>
+<script src="../bootstrap-table/bootstrap.min.js"></script>
+<script src="../bootstrap-table/bootstrap-table.js"></script>
+<script type="text/javascript"
+	src="../bootstrap-3.3.5/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script src="../javascript/table-demo.js"></script>
+
+</HEAD>
+
+<BODY style="margin: 2cm;">
+
+<div>
+<!--***********************************************搜索框*****************************************-->
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">用户:</label>
+    <input type="text" class="form-control" id="username" placeholder="">
+  </div>
+  <div class="form-group" >
+    <label for="exampleInputEmail2"> 订单号:</label>
+    <input type="email" class="form-control" id="orderno" >
+  </div>
+ 
+ <div class="form-group" >
+    <label for="exampleInputEmail2"> 创建时间:</label>
+    <input type="email" class="form-control" id="create-date-from" placeholder="FROM">
+    <input type="email" class="form-control" id="create-date-to" placeholder="TO">
+  </div>
+  <div  class="form-group">订单状态:
+  <select class="form-control" id="order-status">
+  <option value="all">全部</option>
+  <option value="normal">正常</option>
+  <option value="abnormal">异常</option>
+ 
+  </select>
+  
+  
+  
+   <button type="button" class="btn btn-default" onclick="searchOrder()">查询</button>
+   <button class="btn btn-primary" type="button">导出EXCEL</button>
+  <br/>
+  </div>
+</form>
+<span style="float:right">
+
+</span>
+<br/>
+<!--***********************************************table****************************************-->
+<table id="table"></table>
+</div>
+<b>
+<div id="console-div" >
+
+parameters:
+</div>
+
+</b>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               模态框（Modal）标题
+            </h4>
+         </div>
+         <div class="modal-body">
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭
+            </button>
+            <button type="button" class="btn btn-primary">
+               提交更改
+            </button>
+         </div>
+      </div>
+</div>
+</div>
+
+</BODY>
+</HTML>

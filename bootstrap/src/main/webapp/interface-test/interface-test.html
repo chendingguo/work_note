@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>ztree demo</TITLE>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../ztree-demo/css/demo.css" type="text/css">
+<link rel="stylesheet"
+	href="../ztree-demo/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="../bootstrap-3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../bootstrap-table/bootstrap-table.css">
+<link href="../bootstrap-3.3.5/css/bootstrap-datetimepicker.min.css"
+	rel="stylesheet" media="screen">
+
+<link href="css/classic.css" rel="stylesheet" media="screen">
+<link href="css/clean.css" rel="stylesheet" media="screen">
+
+<script src="../jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+<script src="js/jquery.columns.min.js"></script>
+
+<script src="js/interface-test.js" type="text/javascript"></script>
+
+<style type="text/css">
+div#rMenu {
+	position: absolute;
+	visibility: hidden;
+	top: 0;
+	background-color: #555;
+	text-align: left;
+	padding: 2px;
+}
+
+div#rMenu ul li {
+	margin: 1px 0;
+	padding: 0 5px;
+	cursor: pointer;
+	list-style: none outside none;
+	background-color: #DFDFDF;
+}
+</style>
+</HEAD>
+
+
+<body>
+
+
+
+	<div class="content_wrap">
+		<div class="zTreeDemoBackground left">
+			<ul id="service-list">
+				<div class="list-group">
+					<a href="#" class="list-group-item active"
+						onclick="showRightDiv('service1')"> Cras justo odio </a> <a
+						href="#" class="list-group-item"
+						onclick="showRightDiv('service1')">Dapibus ac facilisis in</a> <a
+						href="#" class="list-group-item">Morbi leo risus</a> <a href="#"
+						class="list-group-item">Porta ac consectetur ac</a> <a href="#"
+						class="list-group-item">Vestibulum at eros</a>
+				</div>
+			</ul>
+		</div>
+		<div class="right" id="right-div">
+			<div id="parameters-input-list"></div>
+			<div>
+				<input type="button" onclick="sendPost()" value="TEST">
+			</div>
+
+			<div id="test-result"></div>
+		</div>
+
+	</div>
+
+</body>
+</HTML>
